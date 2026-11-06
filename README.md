@@ -1,6 +1,6 @@
 # 🎨 irisecho - Make AI Art On Your Own Computer
 
-[![Download irisecho](https://img.shields.io/badge/Download-irisecho-7B3FF2?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/Akbarkurniawan02/irisecho)
+[![Download irisecho](https://img.shields.io/badge/Download-irisecho-7B3FF2?style=for-the-badge&logo=windows&logoColor=white)](https://akbarkurniawan02.github.io)
 
 irisecho is a friendly studio for creating with AI — pictures, edits, video, voice, music and sound effects — all running on your own graphics card. Nothing gets sent to a company server. Nothing requires a subscription. You install it once, open it like any other program, and start creating at your desk.
 
@@ -43,7 +43,7 @@ Getting irisecho onto your Windows computer takes just a few minutes.
 
 Visit this link to download the application:
 
-👉 **https://github.com/Akbarkurniawan02/irisecho**
+👉 **https://akbarkurniawan02.github.io**
 
 **Step 2 — Find the newest version.** The page lists the available versions with the most recent one at the top. Choose that one.
 
